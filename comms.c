@@ -478,7 +478,7 @@ void sht1x_open(struct sht1x_device *dev) {
 	}
 
 	snprintf(path, 4096, "/dev/%s", namelist[0]->d_name);
-	dev->fd = open(path, O_RDWR | O_NOCTTY);
+	dev->fd = open(path, O_RDWR | O_NOCTTY | O_NONBLOCK);
 	if (dev->fd == -1) {
 		perror(path);
 		exit(EXIT_FAILURE);

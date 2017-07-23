@@ -3,7 +3,7 @@
 .SUFFIXES: .c .o
 
 CFLAGS = -Wall -Wextra -Wshadow -Werror -D_POSIX_C_SOURCE=200112L \
-	 -D_ISOC99_SOURCE -D_SVID_SOURCE -O2
+	 -D_ISOC99_SOURCE -D_DEFAULT_SOURCE -O2
 TEMPERHUM_OBJS=comms.o readings.o temperhum_munin.o
 BINARY = temperhum_munin
 
